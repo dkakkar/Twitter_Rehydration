@@ -30,12 +30,12 @@ i. Download Tweet_Rehydration_API.py from src folder and run it from the termina
              
 ii. Provide the following file paths:
 
+![Alt text](https://github.com/dkakkar/Twitter_Rehydration/blob/master/screenshot.png "Optional title")
+
     idfilepath: Path to file containing tweet ids
     credentialfilepath: Path to file containing User's Twitter credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
     outfilepath: Path to output text where fully-hydrated Tweet objects are written
-    
-    ![alt tag](https://github.com/dkakkar/Twitter_Rehydration/blob/master/screenshot.png "Description goes here")
-    
+
 #### Output
 
 The output is a text file whose each line is a fully-hydrated Tweet object corresponding to the input Tweet ID 
