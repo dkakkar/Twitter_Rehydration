@@ -2,19 +2,18 @@
 Date: 03/07/17
 Name: tweetRehydration.py
 Version: 1.0
-Function: This module is used for get full tweet JSON corresponding to Tweet ID  upto maximum of 100 Tweet IDs.
-Input: The code needs the following input files:
-idfilepath: path to file containing tweet ids
-credentialfilepath = Path to file containing Twitter user's credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
-outfilepath = Path to output text where the full Tweet JSON is written
-Output: The output is a text file where each line is full Tweet JSON corresponding to the input Tweet ID
+Function: This script is useful to get the details (hydrate) a collection of Tweet IDs. Returns fully-hydrated Tweet objects for up to 100 Tweets per request, as specified by comma-separated values passed to the id parameter.
+Input: The script needs the following input files:
+idfilepath: Path to file containing tweet ids
+credentialfilepath = Path to file containing User's Twitter credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
+outfilepath = Path to output text where fully-hydrated Tweet objects are written
+Output: The output is a text file whose each line is a fully-hydrated Tweet object corresponding to the input Tweet ID
 """
 
 # Import required python libraries
 
 import tweepy
 import csv
-import json
 
 # Declare the variables
 
@@ -42,14 +41,14 @@ def verify_credentials(credentialfile):
         api = tweepy.API(auth)
         return api
 
-# This function looks up for the Tweet corresponding to Tweet ID and writes it to the output file 
+# This function gets fully-hydrated Tweet objects corresponding to Tweet IDs and writes it to the output file 
 
 def write_tweets_bulk(twapi, idlist, outfilepath):
     # Open the output text file    
     outfile = open(outfilepath, 'w+')
-    # Look up for the Tweets corresponding to Tweets Ids in the list
+    # Look up for fully-hydrated Tweet objects corresponding to Tweets Ids in the list
     tweets = twapi.statuses_lookup(id_=idlist)
-    # For every Tweet in the Tweets list, write full tweet to outputfile file
+    # For every Tweet object in the Tweets objects list, write it to outputfile file
     for tweet in tweets:
              outfile.write(str(tweet))
              outfile.write('\n')
@@ -86,11 +85,11 @@ def main():
     idfilepath = input("Enter path to id file ")
     # Path to file containing Twitter user's credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
     credentialfilepath = input("Enter path to Twitter credential file ")
-    # Path to output text where the full Tweet JSON is written
+    # Path to output text where fully-hydrated Tweet objects are written
     outfilepath = input ("Enter path to the output text file ")
     # Twitter API
     api=  verify_credentials(credentialfilepath)
-    #Invole the function to rehydrate the bulk Tweet IDs
+    #Invole the function to get fully-hydrated Tweet objects
     get_tweets_bulk(api, idfilepath, outfilepath)
        
 #Call main
