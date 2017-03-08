@@ -5,8 +5,8 @@ Version: 1.0
 Function: This script is useful to get the details (hydrate) a collection of Tweet IDs. Returns fully-hydrated Tweet objects for up to 100 Tweets per request, as specified by comma-separated values passed to the id parameter.
 Input: The script needs the following input files:
 idfilepath: Path to file containing tweet ids
-credentialfilepath = Path to file containing User's Twitter credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
-outfilepath = Path to output text where fully-hydrated Tweet objects are written
+credentialfilepath: Path to file containing User's Twitter credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
+outfilepath: Path to output text where fully-hydrated Tweet objects are written
 Output: The output is a text file whose each line is a fully-hydrated Tweet object corresponding to the input Tweet ID
 """
 
