@@ -8,7 +8,9 @@ This code is useful to get the details (hydrate) a collection of Tweet IDs. Retu
 
 ## How to use the script
 
-The code works for python 2.7.11. Follow the steps below to run it:
+The code works for python 2.7.11.To install Python 2 follow instructions here https://www.python.org/downloads/
+
+Follow the steps below to run the code:
 
 #### Required libraries
 
