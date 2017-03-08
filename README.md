@@ -34,6 +34,8 @@ ii. Provide the following file paths:
     credentialfilepath: Path to file containing User's Twitter credentials such as Consumer Key, Consumer Secret, Oauth Token and Oauth Secret
     outfilepath: Path to output text where fully-hydrated Tweet objects are written
     
+    ![alt tag](https://github.com/dkakkar/Twitter_Rehydration/blob/master/screenshot.png "Description goes here")
+    
 #### Output
 
 The output is a text file whose each line is a fully-hydrated Tweet object corresponding to the input Tweet ID 
