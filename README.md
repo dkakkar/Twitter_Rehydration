@@ -1,6 +1,6 @@
 # Overview
 
-This code is useful to get the details (hydrate) a collection of Tweet IDs. Returns fully-hydrated Tweet objects for up to 100 Tweets per request, as specified by comma-separated values passed to the id parameter. 
+This code is useful to get the details of (hydrate) a collection of Tweet IDs. Returns fully-hydrated Tweet objects for up to 100 Tweets per request, as specified by comma-separated values passed to the id parameter. 
 
 # Sample Data
 
